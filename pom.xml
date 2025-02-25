@@ -1,0 +1,106 @@
+package org.example;
+
+        import java.util.Scanner;
+
+        public class Main {
+        public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Variables para contar monedas por denominación
+        int monedasDe20 = 0, monedasDe50 = 0, monedasDe100 = 0, monedasDe200 = 0, monedasDe500 = 0;
+
+        // Variables para calcular las sumas de cada tipo de moneda
+        int sumaDe20, sumaDe50, sumaDe100, sumaDe200, sumaDe500, totalGeneral;
+
+        // Variable de control para el menú
+        boolean continuar = true;
+
+        // Menú principal
+        while (continuar) {
+        System.out.println("\n--- Menú Principal ---");
+        System.out.println("1. Añadir una moneda");
+        System.out.println("2. Ver cantidad de monedas");
+        System.out.println("3. Calcular el total de dinero");
+        System.out.println("4. Vaciar la alcancía");
+        System.out.println("5. Salir");
+        System.out.print("Selecciona una opción (1-5): ");
+        int opcionSeleccionada = input.nextInt();
+
+        // Proceso según la opción seleccionada
+        switch (opcionSeleccionada) {
+        case 1:
+        System.out.print("Introduce el valor de la moneda (20, 50, 100, 200, 500): ");
+        int valorMoneda = input.nextInt();
+        switch (valorMoneda) {
+        case 20:
+        monedasDe20++;
+        break;
+        case 50:
+        monedasDe50++;
+        break;
+        case 100:
+        monedasDe100++;
+        break;
+        case 200:
+        monedasDe200++;
+        break;
+        case 500:
+        monedasDe500++;
+        break;
+        default:
+        System.out.println("Moneda no válida, por favor elige una denominación correcta.");
+        }
+        break;
+
+        case 2:
+        System.out.println("Cantidad de monedas de $20: " + monedasDe20);
+        System.out.println("Cantidad de monedas de $50: " + monedasDe50);
+        System.out.println("Cantidad de monedas de $100: " + monedasDe100);
+        System.out.println("Cantidad de monedas de $200: " + monedasDe200);
+        System.out.println("Cantidad de monedas de $500: " + monedasDe500);
+        break;
+
+        case 3:
+        // Calcular el valor total de cada tipo de moneda
+        sumaDe20 = monedasDe20 * 20;
+        sumaDe50 = monedasDe50 * 50;
+        sumaDe100 = monedasDe100 * 100;
+        sumaDe200 = monedasDe200 * 200;
+        sumaDe500 = monedasDe500 * 500;
+
+        // Sumar el total de todo el dinero
+        totalGeneral = sumaDe20 + sumaDe50 + sumaDe100 + sumaDe200 + sumaDe500;
+
+        // Mostrar el resultado
+        System.out.println("Total en monedas de $20: " + sumaDe20);
+        System.out.println("Total en monedas de $50: " + sumaDe50);
+        System.out.println("Total en monedas de $100: " + sumaDe100);
+        System.out.println("Total en monedas de $200: " + sumaDe200);
+        System.out.println("Total en monedas de $500: " + sumaDe500);
+        System.out.println("El total general es: $" + totalGeneral);
+        break;
+
+        case 4:
+        // Restablecer todas las monedas a cero
+        monedasDe20 = 0;
+        monedasDe50 = 0;
+        monedasDe100 = 0;
+        monedasDe200 = 0;
+        monedasDe500 = 0;
+
+        System.out.println("¡La alcancía ha sido vaciada!");
+        break;
+
+        case 5:
+        continuar = false;
+        System.out.println("Gracias por usar el programa. ¡Hasta luego!");
+        break;
+
+        default:
+        System.out.println("Opción no válida, por favor elige una opción entre 1 y 5.");
+        }
+        }
+
+        input.close();
+        }
+        }
