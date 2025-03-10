@@ -40,7 +40,7 @@ public class Main {
                                 System.out.println("Cantidad de monedas  500: " + m500);
                                 break;
 
-                            case 3: // ahorro
+                            case 3: 
                                 int totalAhorrado = (m20 * 20) + (m50 * 50) + (m100 * 100) +
                                         (m200 * 200) + (m500 * 500);
                                 System.out.println("total ahorrado : " + totalAhorrado);
