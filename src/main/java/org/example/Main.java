@@ -23,7 +23,7 @@ public class Main {
                         int options = teclado.nextInt();
 
                         switch (options) {
-                            case 1: // agregar
+                            case 1: 
                                 if (optDenomina == 1) m20++;
                                 else if (optDenomina == 2) m50++;
                                 else if (optDenomina == 3) m100++;
@@ -32,7 +32,7 @@ public class Main {
                                 System.out.println("Se agrego moneda");
                                 break;
 
-                            case 2: // contar
+                            case 2:
                                 System.out.println("Cantidad de monedas  20: " + m20);
                                 System.out.println("Cantidad de monedas  50: " + m50);
                                 System.out.println("Cantidad de monedas  100: " + m100);
@@ -46,7 +46,7 @@ public class Main {
                                 System.out.println("total ahorrado : " + totalAhorrado);
                                 break;
 
-                            case 4: // vaciar
+                            case 4: 
                                 m20 = 0;
                                 m50 = 0;
                                 m100 = 0;
@@ -55,7 +55,7 @@ public class Main {
                                 System.out.println("La alcancia se ha vaciado");
                                 break;
 
-                            case 5: // salida
+                            case 5:
                                 System.out.println("Regresando al menu principal");
                                 break;
 
